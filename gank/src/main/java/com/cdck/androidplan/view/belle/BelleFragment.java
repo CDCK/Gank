@@ -8,17 +8,13 @@ import android.view.View;
 
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseFragment;
-import com.cdck.androidplan.constnt.EventMessage;
-import com.cdck.androidplan.constnt.IDKey;
 import com.cdck.androidplan.model.result.GankInfo;
-import com.cdck.androidplan.ui.TopBarValue;
 import com.cdck.androidplan.view.activity.PreViewActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
