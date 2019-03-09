@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        barColorWhenSelected="#ff0073"
+        id="@+id/navigation_bar_all"
+        title="全部" />
+    <tab
+        barColorWhenSelected="#da4016"
+        id="@+id/navigation_bar_android"
+        title="Android" />
+    <tab
+        barColorWhenSelected="#5eff00"
+        id="@+id/navigation_bar_ios"
+        title="iOS" />
+    <tab
+        barColorWhenSelected="#7300ff"
+        id="@+id/navigation_bar_app"
+        title="App" />
+    <tab
+        barColorWhenSelected="#cc00ff"
+        id="@+id/navigation_bar_front"
+        title="前端" />
+    <tab
+        barColorWhenSelected="#ff9100"
+        id="@+id/navigation_bar_recommend"
+        title="瞎推荐" />
+    <tab
+        barColorWhenSelected="#00fff2"
+        id="@+id/navigation_bar_expand"
+        title="拓展资源" />
+    <tab
+        barColorWhenSelected="#0037ff"
+        id="@+id/navigation_bar_rest_video"
+        title="休息视屏" />
+</tabs>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/date_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_1"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_1"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_2"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_2"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_3"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_3"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_4"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_4"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_5"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_5"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_6"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_6"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/day_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/week_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_7"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/day_7"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/month_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/history_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:src="@drawable/ic_history" />
+</LinearLayout>

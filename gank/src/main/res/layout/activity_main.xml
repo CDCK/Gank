@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.main.MainActivity">
+
+    <com.cdck.androidplan.ui.TopBarUI
+        android:id="@+id/topbar_ui"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        custom:left_img="@drawable/topbar_date"
+        custom:right_img="@drawable/topbar_search"
+        custom:text_color="@color/colorWhite" />
+
+    <com.cdck.androidplan.ui.NewestTopDateUI
+        android:id="@+id/newest_top_date"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_ui" />
+
+    <FrameLayout
+        android:id="@+id/main_fl_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@id/newest_top_date" />
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:bb_badgeBackgroundColor="@color/colorAccent"
+        app:bb_behavior="shifting|iconsOnly"
+        app:bb_tabXmlResource="@xml/bottombar_menu" />
+
+</RelativeLayout>

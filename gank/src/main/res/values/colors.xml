@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="newestTopDateUI_day_color_f">#000000</color>
+    <color name="newestTopDateUI_day_color_t">#00b7ff</color>
+    <color name="newestTopDateUI_week_color_f">#373737</color>
+    <color name="newestTopDateUI_week_color_t">#00b7ff</color>
+
+    <color name="navigation_bar_t">#007c80</color>
+    <color name="navigation_bar_f">#008543</color>
+
+</resources>

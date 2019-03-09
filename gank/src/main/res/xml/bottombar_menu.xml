@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        barColorWhenSelected="@color/colorWhite"
+        icon="@drawable/ic_table_home_t"
+        id="@+id/tab_newest"
+        title="HOME" />
+    <tab
+        barColorWhenSelected="@color/colorWhite"
+        icon="@drawable/ic_table_classify_t"
+        id="@+id/tab_classify"
+        title="Classify" />
+    <tab
+        barColorWhenSelected="@color/colorWhite"
+        icon="@drawable/ic_table_belle_t"
+        id="@+id/tab_belle"
+        title="Belle" />
+    <tab
+        barColorWhenSelected="@color/colorWhite"
+        icon="@drawable/ic_table_collect_t"
+        id="@+id/tab_collect"
+        title="Collect" />
+</tabs>

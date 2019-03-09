@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBar">
+        <attr name="left_img" format="integer|reference" />
+        <attr name="right_img" format="integer|reference" />
+        <attr name="centre_tv" format="string" />
+        <attr name="text_color" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NewestTopDateUI">
+        <attr name="day_text_size" format="integer" />
+        <attr name="week_text_size" format="integer" />
+        <attr name="day_color_t" format="color|reference" />
+        <attr name="day_color_f" format="color|reference" />
+        <attr name="week_color_f" format="color|reference" />
+        <attr name="week_color_t" format="color|reference" />
+    </declare-styleable>
+</resources>
