@@ -91,7 +91,6 @@ public class BelleFragment extends BaseFragment<BelleContract.Presenter> impleme
             StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
             layoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
             belleRv.setLayoutManager(layoutManager);
-            //如果您知道内容的更改不会更改 RecyclerView 的布局大小，那么可以使用此设置来提高性能
             belleRv.setHasFixedSize(true);
             belleRv.setAdapter(adapter);
         } else {
