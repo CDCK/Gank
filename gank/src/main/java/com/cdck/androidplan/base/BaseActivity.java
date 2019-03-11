@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.transition.Slide;
 import android.widget.Toast;
 
-import com.cdck.androidplan.ui.TopBarValue;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -30,6 +28,9 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O) {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        }
         setContentView(getContentViewLayoutID());
         getWindow().setEnterTransition(new Slide().setDuration(500));
         getWindow().setExitTransition(new Slide().setDuration(500));
@@ -37,11 +38,6 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
         mPresenter = initPresenter();
         mPresenter.attachView(this);
         init();
-    }
-
-    @Override
-    public void updateTopBar(TopBarValue value) {
-
     }
 
     protected abstract void init();

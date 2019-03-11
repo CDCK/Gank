@@ -7,19 +7,7 @@
     <!-- 文件的读写权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- SDCard中创建与删除文件权限 -->
 
-
-    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
-    <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
-    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
-
-
-    <uses-permission
-        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
-        tools:ignore="ProtectedPermissions" />
 
     <application
         android:name=".MyApplication"
@@ -32,8 +20,8 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".view.activity.main.MainActivity"
-            android:launchMode="singleTop"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -43,9 +31,12 @@
             android:name=".view.activity.PreViewActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".view.activity.history.HistoryActivity" />
-        <activity android:name=".view.activity.date.DateActivity" />
-        <activity android:name=".view.activity.web.WebActivity" />
+        <activity
+            android:name=".view.activity.history.HistoryActivity" />
+        <activity
+            android:name=".view.activity.date.DateActivity"/>
+        <activity
+            android:name=".view.activity.web.WebActivity"/>
     </application>
 
 </manifest>

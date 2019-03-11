@@ -185,7 +185,8 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
         sectionAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                GankInfo gankInfo = SectionDatas.get(position).t;
+                if (!SectionDatas.get(position).isHeader) {
+                    GankInfo gankInfo = SectionDatas.get(position).t;
 //                String url = gankInfo.getUrl();
 //                String desc = gankInfo.getDesc();
 //                if (!url.isEmpty()) {
@@ -195,6 +196,7 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
 //                    bundle.putString(WebActivity.BUNDLE_TITLE, desc);
                     WebActivity.loadWebViewActivity(DateActivity.this, bundle);
 //                }
+                }
             }
         });
     }

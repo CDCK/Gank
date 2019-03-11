@@ -12,7 +12,6 @@ import com.cdck.androidplan.model.result.RHistoyDate;
 import com.cdck.androidplan.model.result.RToday;
 import com.cdck.androidplan.ui.NewestTopDateUI;
 import com.cdck.androidplan.ui.TopBarUI;
-import com.cdck.androidplan.ui.TopBarValue;
 import com.cdck.androidplan.util.ConverUtil;
 import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.util.RetrofitManager;
@@ -124,10 +123,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
                 String date = url.substring(url.indexOf("day/") + 4);
                 title = date.replace("/", "-");
                 topBarUI.setTitle(title);
-//                TopBarValue topBarValue = new TopBarValue.Builder().leftRes(R.drawable.topbar_date)
-//                        .rightRes(R.drawable.topbar_search)
-//                        .showLeft(true).showRight(false).title(title).build();
-//                updateTopBar(topBarValue);
                 RetrofitManager.gankApi().getDateInfo(date).enqueue(new Callback<RToday>() {
                     @Override
                     public void onResponse(Call<RToday> call, Response<RToday> response) {
@@ -223,15 +218,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
             CURRENT_URL = replace;
             showFragment(0);
         }
-    }
-
-    @Override
-    public void updateTopBar(TopBarValue value) {
-        topBarUI.setLeftVisibility(value.isShowLeft());
-        topBarUI.setRightVisibility(value.isShowRight());
-        topBarUI.setRightIcon(value.getRightRes());
-        topBarUI.setLeftIcon(value.getLeftRes());
-        topBarUI.setTitle(value.getTitle());
     }
 
     /**

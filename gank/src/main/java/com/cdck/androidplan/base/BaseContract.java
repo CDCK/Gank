@@ -1,7 +1,5 @@
 package com.cdck.androidplan.base;
 
-import com.cdck.androidplan.ui.TopBarValue;
-
 /**
  * Created by xlk on 2019/2/28.
  */

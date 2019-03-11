@@ -1,9 +1,12 @@
 package com.cdck.androidplan.view.belle;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.View;
 
 import com.cdck.androidplan.R;
@@ -101,5 +104,65 @@ public class BelleFragment extends BaseFragment<BelleContract.Presenter> impleme
                 PreViewActivity.loadPreViewIcon(getContext(), urls);
             }
         });
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        Log.i("F_life", "BelleFragment.onAttach :   --> ");
+        super.onAttach(context);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        Log.i("F_life", "BelleFragment.onCreate :   --> ");
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        Log.i("F_life", "BelleFragment.onActivityCreated :   --> ");
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        Log.i("F_life", "BelleFragment.onStart :   --> ");
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        Log.i("F_life", "BelleFragment.onResume :   --> ");
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        Log.i("F_life", "BelleFragment.onPause :   --> ");
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        Log.i("F_life", "BelleFragment.onStop :   --> ");
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroyView() {
+        Log.i("F_life", "BelleFragment.onDestroyView :   --> ");
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.i("F_life", "BelleFragment.onDestroy :   --> ");
+        super.onDestroy();
+    }
+
+    @Override
+    public void onDetach() {
+        Log.i("F_life", "BelleFragment.onDetach :   --> ");
+        super.onDetach();
     }
 }
