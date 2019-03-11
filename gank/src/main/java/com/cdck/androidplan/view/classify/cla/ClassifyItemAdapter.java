@@ -36,7 +36,7 @@ public class ClassifyItemAdapter extends BaseQuickAdapter<GankInfo, BaseViewHold
     protected void convert(BaseViewHolder helper, GankInfo item) {
         String publishedAt = item.getPublishedAt();
         String date = publishedAt.substring(0, 10);
-        helper.setText(R.id.item_table_desc, item.getType() + "：" + item.getDesc())
+        helper.setText(R.id.item_table_desc, item.getDesc())
                 .setText(R.id.item_table_author, item.getWho())
                 .setText(R.id.item_table_date, date);
         helper.addOnClickListener(R.id.item_table_iv);

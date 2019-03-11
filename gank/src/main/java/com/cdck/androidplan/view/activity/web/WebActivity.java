@@ -10,7 +10,9 @@ import android.widget.LinearLayout;
 
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseActivity;
+import com.cdck.androidplan.model.result.GankInfo;
 import com.cdck.androidplan.ui.TopBarUI;
+import com.cdck.androidplan.view.collect.CollectFragment;
 import com.daimajia.numberprogressbar.NumberProgressBar;
 
 import butterknife.BindView;
@@ -25,8 +27,10 @@ public class WebActivity extends BaseActivity<WebContract.Presenter> implements 
     NumberProgressBar progressbar;
     @BindView(R.id.constraint_layout)
     LinearLayout constraintLayout;
+    public static final String BUNDLE_GANKINFO = "bundle_gankinfo";
     public static final String BUNDLE_TITLE = "bundle_title";
     public static final String BUNDLE_URL = "bundle_url";
+    private boolean isHave;
 
     /**
      * 所有进入该页面都是调用该方法
@@ -53,11 +57,19 @@ public class WebActivity extends BaseActivity<WebContract.Presenter> implements 
     @Override
     protected void init() {
         Bundle bundle = getIntent().getBundleExtra("web_bundle");
-        String title = bundle.getString(BUNDLE_TITLE);
-        String webUrl = bundle.getString(BUNDLE_URL);
-        mPresenter.setWebViewSettings(webView, webUrl);
-        webTopbar.setTitle(title);
-        webTopbar.setRightVisibility(false);
+        final GankInfo gankInfo = (GankInfo) bundle.getSerializable(BUNDLE_GANKINFO);
+        final String id = gankInfo.get_id();
+        for (int i = 0; i < CollectFragment.collectDatas.size(); i++) {
+            if (CollectFragment.collectDatas.get(i).get_id().equals(id)) {
+                isHave = true;
+                break;
+            }
+        }
+        mPresenter.setWebViewSettings(webView, gankInfo.getUrl());
+        webTopbar.setTitle(gankInfo.getDesc());
+        webTopbar.setRightIcon(R.drawable.topbar_collect_s);
+        webTopbar.setCollect(isHave);
+        webTopbar.setRightVisibility(true);
         webTopbar.setClickCallBack(new TopBarUI.onToolClickListener() {
             @Override
             public void clickTopBarLeft(int resid) {
@@ -66,7 +78,19 @@ public class WebActivity extends BaseActivity<WebContract.Presenter> implements 
 
             @Override
             public void clickTopBarRight(int resid) {
-
+                boolean selectFlag = !webTopbar.getSelectFlag();
+                webTopbar.setCollect(selectFlag);
+                if (selectFlag) {
+                    CollectFragment.collectDatas.add(gankInfo);
+                } else {
+                    for (int i = 0; i < CollectFragment.collectDatas.size(); i++) {
+                        String id1 = CollectFragment.collectDatas.get(i).get_id();
+                        if (id1.equals(id)) {
+                            CollectFragment.collectDatas.remove(i);
+                            break;
+                        }
+                    }
+                }
             }
         });
     }

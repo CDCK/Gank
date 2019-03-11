@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.cdck.androidplan.R;
 
-
 /**
  * Created by xlk on 2019/2/15.
  */
@@ -70,6 +69,13 @@ public class TopBarUI extends LinearLayout {
     public void setRightIcon(int rightRes) {
         right_ib.setImageResource(rightRes);
         right_ib.setTag(rightRes);
+    }
+
+    public boolean getSelectFlag(){
+        return right_ib.isSelected();
+    }
+    public void setCollect(boolean flag){
+        right_ib.setSelected(flag);
     }
 
     public void setLeftIcon(int leftRes) {

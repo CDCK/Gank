@@ -185,14 +185,16 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
         sectionAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                String url = SectionDatas.get(position).t.getUrl();
-                String desc = SectionDatas.get(position).t.getDesc();
-                if (!url.isEmpty()) {
+                GankInfo gankInfo = SectionDatas.get(position).t;
+//                String url = gankInfo.getUrl();
+//                String desc = gankInfo.getDesc();
+//                if (!url.isEmpty()) {
                     Bundle bundle = new Bundle();
-                    bundle.putString(WebActivity.BUNDLE_URL, url);
-                    bundle.putString(WebActivity.BUNDLE_TITLE, desc);
+                    bundle.putSerializable(WebActivity.BUNDLE_GANKINFO, gankInfo);
+//                    bundle.putString(WebActivity.BUNDLE_URL, url);
+//                    bundle.putString(WebActivity.BUNDLE_TITLE, desc);
                     WebActivity.loadWebViewActivity(DateActivity.this, bundle);
-                }
+//                }
             }
         });
     }

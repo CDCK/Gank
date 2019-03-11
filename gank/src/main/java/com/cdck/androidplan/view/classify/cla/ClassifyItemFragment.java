@@ -102,11 +102,12 @@ public class ClassifyItemFragment extends BaseFragment<ClassifyItemContract.Pres
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 GankInfo gankInfo1 = datas.get(position);
-                String url = gankInfo1.getUrl();
-                String desc = gankInfo1.getDesc();
+//                String url = gankInfo1.getUrl();
+//                String desc = gankInfo1.getDesc();
                 Bundle bundle = new Bundle();
-                bundle.putString(WebActivity.BUNDLE_URL, url);
-                bundle.putString(WebActivity.BUNDLE_TITLE, desc);
+                bundle.putSerializable(WebActivity.BUNDLE_GANKINFO, gankInfo1);
+//                bundle.putString(WebActivity.BUNDLE_URL, url);
+//                bundle.putString(WebActivity.BUNDLE_TITLE, desc);
                 WebActivity.loadWebViewActivity(getActivity(), bundle);
             }
         });

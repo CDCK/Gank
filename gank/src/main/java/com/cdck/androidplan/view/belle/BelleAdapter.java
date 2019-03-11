@@ -39,7 +39,7 @@ public class BelleAdapter extends BaseQuickAdapter<GankInfo, BaseViewHolder> {
     }
 
     /**
-     * 实现图片瀑布流效果，获取网络图片的
+     * 实现图片瀑布流效果，获取网络图片的宽高比
      *
      * @param from
      * @param to
