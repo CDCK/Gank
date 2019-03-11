@@ -16,9 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.cdck.androidplan.MyApplication;
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseActivity;
 import com.cdck.androidplan.model.result.GankInfo;
@@ -32,7 +30,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.squareup.leakcanary.RefWatcher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,13 +48,6 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
     private ImageView imageView;
     private String imgUrl;
     private NewestSectionAdapter sectionAdapter;
-    RequestOptions options = new RequestOptions()
-            .placeholder(R.drawable.shape_white)//占位图
-            .error(R.drawable.belee_img)
-            .override(Target.SIZE_ORIGINAL)//指定图片大小，Target.SIZE_ORIGINAL 表示原图大小
-            .skipMemoryCache(false)//是否禁用掉硬盘缓存
-//                .dontAnimate()
-            ;
     private String dateStr;
 
     @Override
@@ -83,7 +73,6 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
         dateTopBar.setClickCallBack(new TopBarUI.onToolClickListener() {
             @Override
             public void clickTopBarLeft(int resid) {
-//                onBackPressed();
                 finish();
             }
 
@@ -165,7 +154,6 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
                         return false;
                     }
                 })
-//                .apply(options)
                 .into(headerIv);
         sectionAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
@@ -187,26 +175,11 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 if (!SectionDatas.get(position).isHeader) {
                     GankInfo gankInfo = SectionDatas.get(position).t;
-//                String url = gankInfo.getUrl();
-//                String desc = gankInfo.getDesc();
-//                if (!url.isEmpty()) {
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(WebActivity.BUNDLE_GANKINFO, gankInfo);
-//                    bundle.putString(WebActivity.BUNDLE_URL, url);
-//                    bundle.putString(WebActivity.BUNDLE_TITLE, desc);
                     WebActivity.loadWebViewActivity(DateActivity.this, bundle);
-//                }
                 }
             }
         });
-    }
-
-    @Override
-    protected void onDestroy() {
-        LogU.i("DateActivity -->", "onDestroy() 启动");
-        super.onDestroy();
-        RefWatcher refWatcher = MyApplication.getRefWatcher(this);
-        refWatcher.watch(this);
-//        refWatcher.watch(imgUrl);
     }
 }

@@ -26,9 +26,7 @@ import com.hjq.permissions.XXPermissions;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-
 import java.util.List;
-
 import butterknife.BindView;
 import retrofit2.Call;
 import retrofit2.Callback;

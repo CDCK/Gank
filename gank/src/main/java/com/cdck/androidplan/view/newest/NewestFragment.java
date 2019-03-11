@@ -156,15 +156,9 @@ public class NewestFragment extends BaseFragment<NewestContract.Presenter> imple
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 if (!SectionDatas.get(position).isHeader) {
                     GankInfo gankInfo = SectionDatas.get(position).t;
-//                String url = gankInfo.getUrl();
-//                String desc = gankInfo.getDesc();
-//                if (!url.isEmpty()) {
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(WebActivity.BUNDLE_GANKINFO, gankInfo);
-//                    bundle.putString(WebActivity.BUNDLE_URL, url);
-//                    bundle.putString(WebActivity.BUNDLE_TITLE, desc);
                     WebActivity.loadWebViewActivity(getActivity(), bundle);
-//                }
                 }
             }
         });

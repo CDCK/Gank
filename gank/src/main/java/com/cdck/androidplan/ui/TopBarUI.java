@@ -74,6 +74,7 @@ public class TopBarUI extends LinearLayout {
     public boolean getSelectFlag(){
         return right_ib.isSelected();
     }
+
     public void setCollect(boolean flag){
         right_ib.setSelected(flag);
     }
