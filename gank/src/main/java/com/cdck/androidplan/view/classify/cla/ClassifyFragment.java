@@ -8,13 +8,7 @@ import android.support.v4.view.ViewPager;
 
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseFragment;
-import com.cdck.androidplan.constnt.EventMessage;
-import com.cdck.androidplan.constnt.IDKey;
-import com.cdck.androidplan.ui.TopBarValue;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
-
-import org.greenrobot.eventbus.EventBus;
-
 import java.util.ArrayList;
 import java.util.List;
 

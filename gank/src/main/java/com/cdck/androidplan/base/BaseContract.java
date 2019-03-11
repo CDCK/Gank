@@ -13,19 +13,11 @@ public interface BaseContract {
 
         void detachView();
 
-        void updateTopBar();
-
-        void registEventBus();
-
-        void unregistEventBus();
-
         void showToast(String msg);
     }
 
     interface BaseView {
         void showToast(String msg);
-
-        void updateTopBar(TopBarValue value);
 
     }
 }

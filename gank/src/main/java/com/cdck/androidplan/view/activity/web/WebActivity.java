@@ -28,8 +28,6 @@ public class WebActivity extends BaseActivity<WebContract.Presenter> implements 
     @BindView(R.id.constraint_layout)
     LinearLayout constraintLayout;
     public static final String BUNDLE_GANKINFO = "bundle_gankinfo";
-    public static final String BUNDLE_TITLE = "bundle_title";
-    public static final String BUNDLE_URL = "bundle_url";
     private boolean isHave;
 
     /**

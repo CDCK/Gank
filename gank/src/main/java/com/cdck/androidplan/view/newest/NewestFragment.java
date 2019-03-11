@@ -14,15 +14,11 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseFragment;
-import com.cdck.androidplan.constnt.EventMessage;
-import com.cdck.androidplan.constnt.IDKey;
 import com.cdck.androidplan.model.result.GankInfo;
 import com.cdck.androidplan.model.result.NewestSection;
-import com.cdck.androidplan.ui.TopBarValue;
 import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.view.activity.PreViewActivity;
 import com.cdck.androidplan.view.activity.main.MainActivity;
@@ -31,8 +27,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;

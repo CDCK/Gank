@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.cdck.androidplan.ui.TopBarValue;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -78,8 +77,9 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //由于fragment生命周期比较复杂,所以Presenter在onCreateView创建视图之后再进行绑定,不然会报空指针异常
-        mPresenter.attachView(this);
-        mPresenter.registEventBus();
+        if(mPresenter!=null) {
+            mPresenter.attachView(this);
+        }
         init(savedInstanceState);
     }
 
@@ -100,25 +100,11 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
 
     @Override
     public void onDestroyView() {
-        mPresenter.detachView();
-        mPresenter.unregistEventBus();
+        if(mPresenter!=null)mPresenter.detachView();
         if (unbinder != null) {
             unbinder.unbind();
         }
         super.onDestroyView();
-    }
-
-    @Override
-    public void onDestroy() {
-        mPresenter.detachView();
-        mPresenter.unregistEventBus();
-        super.onDestroy();
-    }
-
-
-    @Override
-    public void updateTopBar(TopBarValue value) {
-
     }
 
     @Override

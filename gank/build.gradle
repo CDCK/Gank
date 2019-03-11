@@ -43,8 +43,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2' // 用Gson解析json的转换器
 
-    implementation 'org.greenrobot:eventbus:3.0.0'
-
     //下拉刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-20'//没有使用特殊Header，可以不加这行

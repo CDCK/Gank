@@ -3,7 +3,6 @@ package com.cdck.androidplan.view.activity.history;
 import android.text.TextUtils;
 
 import com.cdck.androidplan.base.BasePresenter;
-import com.cdck.androidplan.constnt.EventMessage;
 import com.cdck.androidplan.model.result.RHistoryDayInfo;
 import com.cdck.androidplan.model.result.RHistoyDate;
 import com.cdck.androidplan.model.result.GankInfo;
@@ -13,9 +12,6 @@ import com.cdck.androidplan.util.DateUtil;
 import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.util.RetrofitManager;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -110,22 +106,5 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.View> implem
 
             }
         });
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void getEventMessage(EventMessage msg) {
-        switch (msg.getKey()) {
-
-        }
-    }
-
-    @Override
-    public void registEventBus() {
-        EventBus.getDefault().register(this);
-    }
-
-    @Override
-    public void unregistEventBus() {
-        EventBus.getDefault().unregister(this);
     }
 }

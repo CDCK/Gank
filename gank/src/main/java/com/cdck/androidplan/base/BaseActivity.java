@@ -36,7 +36,6 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
         mUnbinder = ButterKnife.bind(this);
         mPresenter = initPresenter();
         mPresenter.attachView(this);
-        mPresenter.registEventBus();
         init();
     }
 
@@ -51,7 +50,6 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     protected void onDestroy() {
         super.onDestroy();
         if (mPresenter != null) {
-            mPresenter.unregistEventBus();
             mPresenter.detachView();
         }
         if (mUnbinder != null) {
@@ -67,10 +65,6 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     @Override
     public void showToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
-
-    public void jumpTo(Class clz) {
-        startActivity(new Intent(this, clz));
     }
 
     public void jumpTo(Class clz, Bundle bundle) {

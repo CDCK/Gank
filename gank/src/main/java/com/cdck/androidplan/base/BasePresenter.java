@@ -38,18 +38,4 @@ public class BasePresenter<V extends BaseContract.BaseView> implements BaseContr
         mRefView.get().showToast(msg);
     }
 
-    @Override
-    public void updateTopBar() {
-
-    }
-
-    @Override
-    public void registEventBus() {
-
-    }
-
-    @Override
-    public void unregistEventBus() {
-
-    }
 }
