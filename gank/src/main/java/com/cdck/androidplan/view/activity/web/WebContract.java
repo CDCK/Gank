@@ -14,6 +14,7 @@ public interface WebContract extends BaseContract {
 
     interface View extends BaseView {
         void showProgressBar(int progress);
+
         void setWebTitle(String title);
     }
 }

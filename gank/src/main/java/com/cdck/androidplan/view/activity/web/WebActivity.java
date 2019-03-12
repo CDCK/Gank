@@ -90,6 +90,7 @@ public class WebActivity extends BaseActivity<WebContract.Presenter> implements 
                     }
                 }
             }
+
         });
     }
 
@@ -97,11 +98,7 @@ public class WebActivity extends BaseActivity<WebContract.Presenter> implements 
     public void showProgressBar(int progress) {
         if (progressbar == null) return;
         progressbar.setProgress(progress);
-        if (progress == 100) {
-            progressbar.setVisibility(View.GONE);
-        } else {
-            progressbar.setVisibility(View.VISIBLE);
-        }
+        progressbar.setVisibility(progress == 100 ? View.GONE : View.VISIBLE);
     }
 
     @Override

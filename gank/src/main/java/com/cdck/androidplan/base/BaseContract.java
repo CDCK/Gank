@@ -11,7 +11,6 @@ public interface BaseContract {
 
         void detachView();
 
-        void showToast(String msg);
     }
 
     interface BaseView {

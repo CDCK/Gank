@@ -33,8 +33,8 @@ public class BasePresenter<V extends BaseContract.BaseView> implements BaseContr
         return mRefView != null && mRefView.get() != null;
     }
 
-    @Override
-    public void showToast(String msg) {
+
+    protected void showToast(String msg) {
         mRefView.get().showToast(msg);
     }
 
