@@ -31,11 +31,7 @@ public class BelleAdapter extends BaseQuickAdapter<GankInfo, BaseViewHolder> {
         initImgScale(0, mData.size());
         options = new RequestOptions()
                 .placeholder(R.drawable.shape_white)//占位图
-                .error(R.drawable.belee_img)
-//                .override(Target.SIZE_ORIGINAL)//指定图片大小，Target.SIZE_ORIGINAL 表示原图大小
-//                .skipMemoryCache(false)//是否禁用掉硬盘缓存
-//                .dontAnimate()
-        ;
+                .error(R.drawable.error_load);
     }
 
     /**

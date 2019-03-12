@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.cdck.androidplan.R;
+import com.cdck.androidplan.base.BaseContract;
 import com.cdck.androidplan.base.BaseFragment;
 import com.cdck.androidplan.model.result.GankInfo;
 import com.cdck.androidplan.view.activity.web.WebActivity;
@@ -21,7 +22,7 @@ import butterknife.BindView;
 /**
  * Created by xlk on 2019/1/17.
  */
-public class CollectFragment extends BaseFragment<CollectContract.Presenter> implements CollectContract.View {
+public class CollectFragment extends BaseFragment {
 
     public static List<GankInfo> collectDatas = new ArrayList<>();
     @BindView(R.id.collect_rv)
@@ -29,8 +30,8 @@ public class CollectFragment extends BaseFragment<CollectContract.Presenter> imp
     private ClassifyItemAdapter adapter;
 
     @Override
-    public CollectContract.Presenter initPresenter() {
-        return new CollectPresenter();
+    protected BaseContract.BasePresenter initPresenter() {
+        return null;
     }
 
     @Override
@@ -54,8 +55,6 @@ public class CollectFragment extends BaseFragment<CollectContract.Presenter> imp
                     GankInfo gankInfo = collectDatas.get(position);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(WebActivity.BUNDLE_GANKINFO, gankInfo);
-//                    bundle.putString(WebActivity.BUNDLE_URL, gankInfo.getUrl());
-//                    bundle.putString(WebActivity.BUNDLE_TITLE, gankInfo.getDesc());
                     WebActivity.loadWebViewActivity(getActivity(), bundle);
                 }
             });

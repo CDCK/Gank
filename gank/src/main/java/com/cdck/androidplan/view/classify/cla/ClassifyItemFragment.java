@@ -10,6 +10,7 @@ import android.view.View;
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseFragment;
 import com.cdck.androidplan.model.result.GankInfo;
+import com.cdck.androidplan.view.activity.PreViewActivity;
 import com.cdck.androidplan.view.activity.web.WebActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -102,13 +103,22 @@ public class ClassifyItemFragment extends BaseFragment<ClassifyItemContract.Pres
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 GankInfo gankInfo1 = datas.get(position);
-//                String url = gankInfo1.getUrl();
-//                String desc = gankInfo1.getDesc();
                 Bundle bundle = new Bundle();
                 bundle.putSerializable(WebActivity.BUNDLE_GANKINFO, gankInfo1);
-//                bundle.putString(WebActivity.BUNDLE_URL, url);
-//                bundle.putString(WebActivity.BUNDLE_TITLE, desc);
                 WebActivity.loadWebViewActivity(getActivity(), bundle);
+            }
+        });
+        adapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                if (view.getId() == R.id.item_table_iv) {
+                    ArrayList<String> urls = new ArrayList<>();
+                    List<String> images = datas.get(position).getImages();
+                    if (!images.isEmpty()) {
+                        urls.addAll(images);
+                        PreViewActivity.loadPreViewIcon(getContext(), urls);
+                    }
+                }
             }
         });
     }

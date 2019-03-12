@@ -11,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cdck.androidplan.R;
-import com.cdck.androidplan.constnt.GankConstnt;
 import com.cdck.androidplan.model.result.RHistoyDate;
 import com.cdck.androidplan.util.DateUtil;
 import com.cdck.androidplan.util.LogU;

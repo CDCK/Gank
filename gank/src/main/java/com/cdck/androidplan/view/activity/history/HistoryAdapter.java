@@ -24,7 +24,7 @@ public class HistoryAdapter extends BaseQuickAdapter<HistoryData, BaseViewHolder
         super(layoutResId, data);
         options = new RequestOptions()
                 .placeholder(R.drawable.shape_white)//占位图
-                .error(R.drawable.belee_img)
+                .error(R.drawable.error_load)
                 .override(Target.SIZE_ORIGINAL)//指定图片大小，Target.SIZE_ORIGINAL 表示原图大小
                 .skipMemoryCache(false)//是否禁用掉硬盘缓存
 //                .dontAnimate()

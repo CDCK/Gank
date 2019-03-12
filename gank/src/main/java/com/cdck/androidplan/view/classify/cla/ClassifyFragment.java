@@ -37,7 +37,6 @@ public class ClassifyFragment extends BaseFragment {
 
     @Override
     protected void init(Bundle savedInstanceState) {
-//        getActivity().setTitle("分类");
         FragmentManager childFragmentManager = getChildFragmentManager();
         ArrayList<String> tbs = new ArrayList<>();
         tbs.add("全部");
@@ -72,7 +71,6 @@ public class ClassifyFragment extends BaseFragment {
         private ArrayList<String> tbs;
         private FragmentManager fragmentmanager;
         private List<Fragment> fragmentList;
-        //private FragmentTransaction transaction;
 
         public MyFragmentPagerAdapter(FragmentManager fm, List<Fragment> list, ArrayList<String> tbs) {
             super(fm);
@@ -80,15 +78,6 @@ public class ClassifyFragment extends BaseFragment {
             this.fragmentList = list;
             this.tbs = tbs;
         }
-//
-////        @NonNull
-////        @Override
-////        public Object instantiateItem(@NonNull ViewGroup container, int position) {
-////            if (transaction == null) {
-////                transaction = fragmentmanager.beginTransaction();
-////            }
-////            return fragmentList.get(position);
-////        }
 
         @Override
         public Fragment getItem(int position) {
