@@ -13,7 +13,6 @@ import com.cdck.androidplan.model.result.RToday;
 import com.cdck.androidplan.ui.NewestTopDateUI;
 import com.cdck.androidplan.ui.TopBarUI;
 import com.cdck.androidplan.util.ConverUtil;
-import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.util.RetrofitManager;
 import com.cdck.androidplan.view.activity.history.HistoryActivity;
 import com.cdck.androidplan.view.belle.BelleFragment;
@@ -116,7 +115,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
         newest_top_date.setOnSelectListener(new NewestTopDateUI.SelectListener() {
             @Override
             public void select(String url) {
-                LogU.i("MainActivity -->", "点击了某一天的：" + url);
                 CURRENT_URL = url;
                 String date = url.substring(url.indexOf("day/") + 4);
                 title = date.replace("/", "-");

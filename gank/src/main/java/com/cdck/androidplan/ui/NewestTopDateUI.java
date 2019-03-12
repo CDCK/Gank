@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.cdck.androidplan.R;
 import com.cdck.androidplan.model.result.RHistoyDate;
 import com.cdck.androidplan.util.DateUtil;
-import com.cdck.androidplan.util.LogU;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -50,7 +49,6 @@ public class NewestTopDateUI extends LinearLayout {
     public void update(RHistoyDate histoyDateInfo) {
         List<String> dates = histoyDateInfo.getResults();
         if (dates == null) return;
-        LogU.i("NewestTopDateUI -->", "共有" + dates.size() + "条历史发布");
         for (int i = 0; i < 7; i++) {
             setText(i, DateUtil.stringToDate(dates.get(i), DateUtil.FORMAT_DATE));
         }

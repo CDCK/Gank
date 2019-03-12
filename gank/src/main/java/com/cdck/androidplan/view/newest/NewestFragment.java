@@ -19,7 +19,6 @@ import com.cdck.androidplan.R;
 import com.cdck.androidplan.base.BaseFragment;
 import com.cdck.androidplan.model.result.GankInfo;
 import com.cdck.androidplan.model.result.NewestSection;
-import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.view.activity.PreViewActivity;
 import com.cdck.androidplan.view.activity.main.MainActivity;
 import com.cdck.androidplan.view.activity.web.WebActivity;
@@ -113,7 +112,6 @@ public class NewestFragment extends BaseFragment<NewestContract.Presenter> imple
         if (sectionAdapter == null) {
             sectionAdapter = new NewestSectionAdapter(R.layout.newest_section_item,
                     R.layout.newest_header_item, SectionDatas);
-            LogU.i("NewestFragment -->", "headView是否为空：" + (headView == null));
             sectionAdapter.addHeaderView(headView);
             fNewestRv.setLayoutManager(new LinearLayoutManager(getContext()));
             fNewestRv.setAdapter(sectionAdapter);

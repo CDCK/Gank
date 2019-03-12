@@ -22,7 +22,6 @@ import com.cdck.androidplan.base.BaseActivity;
 import com.cdck.androidplan.model.result.GankInfo;
 import com.cdck.androidplan.model.result.NewestSection;
 import com.cdck.androidplan.ui.TopBarUI;
-import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.view.activity.PreViewActivity;
 import com.cdck.androidplan.view.activity.web.WebActivity;
 import com.cdck.androidplan.view.newest.NewestSectionAdapter;
@@ -65,7 +64,6 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
         String date = bundle.getString("date");
-        LogU.i("DateActivity -->", "接收到的日期：" + date);
         dateStr = date.replace("-", "/");
         mPresenter.getDateInfo(dateStr);
         dateTopBar.setRightVisibility(false);
@@ -137,20 +135,17 @@ public class DateActivity extends BaseActivity<DateContract.Presenter> implement
         //设置头布局图片
         final LinearLayout headerLayout = sectionAdapter.getHeaderLayout();
         final ImageView headerIv = headerLayout.findViewById(R.id.header_img);
-        LogU.i("DateActivity -->", "图片地址：" + imgUrl);
         Glide.with(this)
                 .load(imgUrl)
                 .addListener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        LogU.e("DateActivity -->", "onLoadFailed()  加载图片失败");
                         sectionAdapter.removeHeaderView(headView);
                         return false;
                     }
 
                     @Override
                     public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        LogU.i("DateActivity -->", "onResourceReady() 加载图片成功");
                         return false;
                     }
                 })

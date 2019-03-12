@@ -9,7 +9,6 @@ import com.cdck.androidplan.model.result.GankInfo;
 import com.cdck.androidplan.model.result.HistoryData;
 import com.cdck.androidplan.model.result.RToday;
 import com.cdck.androidplan.util.DateUtil;
-import com.cdck.androidplan.util.LogU;
 import com.cdck.androidplan.util.RetrofitManager;
 
 
@@ -37,9 +36,7 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.View> implem
             public void onResponse(Call<RHistoyDate> call, Response<RHistoyDate> response) {
                 List<String> results = response.body().getResults();
                 int size = results.size();
-                LogU.i("HistoryPresenter -->", "历史日期字符串个数：" + size);
                 for (int i = f; i < t; i++) {
-                    LogU.i("HistoryPresenter -->", "进入for循环查询");
                     String s = results.get(i);
                     final HistoryData data = new HistoryData();
                     data.setDate(s);
@@ -63,11 +60,9 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.View> implem
                                         if (!belleList.isEmpty()) {
                                             GankInfo gankInfo = belleList.get(0);
                                             String url = gankInfo.getUrl();
-                                            LogU.i("HistoryPresenter -->", "添加图片URL地址：" + url);
                                             data.setImgurl(url);
                                         }
                                         mData.add(data);
-                                        LogU.i("HistoryPresenter -->", "获取的数据个数：" + mData.size());
                                         if (mData.size() == 10) {
                                             //按日期排序
                                             Collections.sort(mData, new Comparator<HistoryData>() {
@@ -88,7 +83,6 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.View> implem
 
                                 @Override
                                 public void onFailure(Call<RToday> call, Throwable t) {
-                                    LogU.e("HistoryPresenter -->", "循环中获取出错");
                                 }
                             });
                         }
