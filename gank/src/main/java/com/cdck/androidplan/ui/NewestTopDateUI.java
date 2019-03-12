@@ -25,6 +25,7 @@ import java.util.List;
  */
 public class NewestTopDateUI extends LinearLayout {
 
+    private final String URL = "https://gank.io/api/day/";
     private ViewHolder holder;
     private final int day_color_f;
     private final int day_color_t;
@@ -59,43 +60,43 @@ public class NewestTopDateUI extends LinearLayout {
     private void setText(int i, Date date) {
         switch (i) {
             case 0:
-                holder.date_1.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_1.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_1.setText(DateUtil.getDayOfDate(date));
                 holder.week_1.setText(DateUtil.getWeekOfDate(date));
                 holder.month_1.setText(DateUtil.getMonthOfDate(date));
                 break;
             case 1:
-                holder.date_2.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_2.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_2.setText(DateUtil.getDayOfDate(date));
                 holder.week_2.setText(DateUtil.getWeekOfDate(date));
                 holder.month_2.setText(DateUtil.getMonthOfDate(date));
                 break;
             case 2:
-                holder.date_3.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_3.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_3.setText(DateUtil.getDayOfDate(date));
                 holder.week_3.setText(DateUtil.getWeekOfDate(date));
                 holder.month_3.setText(DateUtil.getMonthOfDate(date));
                 break;
             case 3:
-                holder.date_4.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_4.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_4.setText(DateUtil.getDayOfDate(date));
                 holder.week_4.setText(DateUtil.getWeekOfDate(date));
                 holder.month_4.setText(DateUtil.getMonthOfDate(date));
                 break;
             case 4:
-                holder.date_5.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_5.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_5.setText(DateUtil.getDayOfDate(date));
                 holder.week_5.setText(DateUtil.getWeekOfDate(date));
                 holder.month_5.setText(DateUtil.getMonthOfDate(date));
                 break;
             case 5:
-                holder.date_6.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_6.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_6.setText(DateUtil.getDayOfDate(date));
                 holder.week_6.setText(DateUtil.getWeekOfDate(date));
                 holder.month_6.setText(DateUtil.getMonthOfDate(date));
                 break;
             case 6:
-                holder.date_7.setTag(GankConstnt.HISTORY_DAY_URL + DateUtil.getThisDate(date));
+                holder.date_7.setTag(URL + DateUtil.getThisDate(date));
                 holder.day_7.setText(DateUtil.getDayOfDate(date));
                 holder.week_7.setText(DateUtil.getWeekOfDate(date));
                 holder.month_7.setText(DateUtil.getMonthOfDate(date));
