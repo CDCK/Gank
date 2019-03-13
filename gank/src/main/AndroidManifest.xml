@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.cdck.androidplan">
+    package="com.cdck.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 文件的读写权限 -->
@@ -10,7 +10,7 @@
 
 
     <application
-        android:name=".MyApplication"
+        android:name="com.cdck.android.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".view.activity.main.MainActivity"
+            android:name="com.cdck.android.view.activity.main.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTop">
             <intent-filter>
@@ -28,15 +28,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activity.PreViewActivity"
+            android:name="com.cdck.android.view.activity.PreViewActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".view.activity.history.HistoryActivity" />
+            android:name="com.cdck.android.view.activity.history.HistoryActivity" />
         <activity
-            android:name=".view.activity.date.DateActivity"/>
+            android:name="com.cdck.android.view.activity.date.DateActivity"/>
         <activity
-            android:name=".view.activity.web.WebActivity"/>
+            android:name="com.cdck.android.view.activity.web.WebActivity"/>
     </application>
 
 </manifest>

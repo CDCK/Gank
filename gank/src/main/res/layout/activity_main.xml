@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.main.MainActivity">
 
-    <com.cdck.androidplan.ui.TopBarUI
+    <com.cdck.android.ui.TopBarUI
         android:id="@+id/topbar_ui"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -18,7 +18,7 @@
         custom:right_img="@drawable/topbar_search"
         custom:text_color="@color/colorWhite" />
 
-    <com.cdck.androidplan.ui.NewestTopDateUI
+    <com.cdck.android.ui.NewestTopDateUI
         android:id="@+id/newest_top_date"
         android:layout_width="match_parent"
         android:visibility="gone"
